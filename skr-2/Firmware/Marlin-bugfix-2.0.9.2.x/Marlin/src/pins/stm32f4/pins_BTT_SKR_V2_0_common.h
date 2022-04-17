@@ -350,6 +350,7 @@
   #define SDIO_D3_PIN                       PC11
   #define SDIO_CK_PIN                       PC12
   #define SDIO_CMD_PIN                      PD2
+  #define SD_DETECT_PIN                     -1  //set to ignore SD inserted signal
 
 #elif SD_CONNECTION_IS(LCD)
 
@@ -359,7 +360,7 @@
   #define SD_MISO_PIN                       PA6
   #define SD_MOSI_PIN                       PA7
   #define SD_DETECT_PIN                     PC4
-
+  
 #elif SD_CONNECTION_IS(CUSTOM_CABLE)
   #error "CUSTOM_CABLE is not a supported SDCARD_CONNECTION for this board"
 #endif
