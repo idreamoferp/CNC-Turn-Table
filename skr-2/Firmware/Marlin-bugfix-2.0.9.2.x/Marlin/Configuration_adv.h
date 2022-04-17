@@ -1471,7 +1471,9 @@
    * You can just click to start the print, or navigate elsewhere.
    */
   #define SD_REPRINT_LAST_SELECTED_FILE
-
+  #if ENABLED(SD_REPRINT_LAST_SELECTED_FILE)
+    #define SD_FOOT_PEDAL_START               // adds pin input to restart last selected file
+  #endif
   /**
    * Auto-report SdCard status with M27 S<seconds>
    */

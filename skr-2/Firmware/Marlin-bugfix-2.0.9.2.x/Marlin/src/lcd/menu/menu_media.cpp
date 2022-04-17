@@ -84,6 +84,9 @@ class MenuItem_sdfile : public MenuItem_sdbase {
           );
         });
       #else
+        #if ENABLED(SD_FOOT_PEDAL_START)
+          attachInterrupt(digitalPinToInterrupt(FOOT_PEDAL_START_PIN), sdcard_start_selected_file, FALLING);
+        #endif
         sdcard_start_selected_file();
         UNUSED(pstr);
       #endif

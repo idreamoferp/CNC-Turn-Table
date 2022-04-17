@@ -351,6 +351,10 @@
   #define SDIO_CK_PIN                       PC12
   #define SDIO_CMD_PIN                      PD2
   #define SD_DETECT_PIN                     -1  //set to ignore SD inserted signal
+  #if ENABLED(SD_FOOT_PEDAL_START)
+    #define FOOT_PEDAL_START_PIN            PC2
+  #endif
+  
 
 #elif SD_CONNECTION_IS(LCD)
 

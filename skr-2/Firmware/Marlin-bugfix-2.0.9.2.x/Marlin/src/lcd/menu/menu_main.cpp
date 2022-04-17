@@ -234,7 +234,10 @@ void menu_main() {
   BACK_ITEM(MSG_INFO_SCREEN);
 
   #if ENABLED(SDSUPPORT)
-
+    #if ENABLED(SD_FOOT_PEDAL_START)
+      detachInterrupt(digitalPinToInterrupt(FOOT_PEDAL_START_PIN));
+    #endif
+    
     #if !defined(MEDIA_MENU_AT_TOP) && !HAS_ENCODER_WHEEL
       #define MEDIA_MENU_AT_TOP
     #endif
