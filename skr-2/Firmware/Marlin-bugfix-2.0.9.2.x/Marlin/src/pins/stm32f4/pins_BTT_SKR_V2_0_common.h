@@ -125,6 +125,7 @@
   #endif
 #endif
 
+#define I_MIN_PIN                           PC15  // PWRDET
 //
 // Z Probe (when not Z_MIN_PIN)
 //
@@ -195,6 +196,13 @@
 #define E0_ENABLE_PIN                       PC7
 #ifndef E0_CS_PIN
   #define E0_CS_PIN                         PC6
+#endif
+
+#define I_STEP_PIN                         E0_STEP_PIN
+#define I_DIR_PIN                          E0_DIR_PIN
+#define I_ENABLE_PIN                       E0_ENABLE_PIN
+#ifndef I_CS_PIN
+  #define I_CS_PIN                         E0_CS_PIN
 #endif
 
 #define E1_STEP_PIN                         PD11
